@@ -56,18 +56,67 @@ _____
 
 ### Documento del proyecto 
     1. Planteamiento del problema 
+       1. Definición del problema
+          1. Lectura y escritura de datos controlada con estructuras de datos conocidas en archivos de texto plano.
+       2. Resolucion del problema 
+          1. Abstraer el concepto de lista enlazada tipo cola con la opcion de añadir en una posicion especifica
+          2. Abstraer lo obtenido de los archivos como el objeto **Contenido** y el contenido puede ser normalizado en una lista de **Registros**
+          3. Crear funciones de lectura y escritura de archivos como clases independientes
+          4. Gestionar el contenido del archivo mediante listas enlazadas, para separar los registros totales, de lo disponible y lo eliminado
+          5. Construir el archivo de indices para gestionar la ultima version del archivo de registros
     2. Descripción del archivo de datos
+       1. main.py --> archivo principal del programa
+       2. src --> Carpeta con las funciones necesarias para resolver el problema planteado
+       3. data --> Carpeta con los archivos de texto plano necesarios para resolver el problema
     3. Lenguaje de programación y requerimientos para ejecución 
+       1. Lenguaje de programación: Python
+       2. Requerimientos para la ejecución: 
+          1. Python > 3.6
+            * [Descargar Python](https://www.python.org/downloads/release/python-3104/)
+          2. Pip (gestor de paquetes de python)
+            * [Descargar pip.py](https://bootstrap.pypa.io/get-pip.py)
+            * Luego ejecutar en una terminal el siguiente comandos (en la ubicacion del archivo)
+              ```py
+              python get-pip.py
+              ```
+          3. Tabulate (Print tables)
+            * Ejecutar el siguiente comando en una terminal:
+              ```py
+              pip install tabulate
+              ```
+          4. Regex (Regular expressions)
+            * Ejecutar el siguiente comando en una terminal:
+              ```py
+              pip install regex
+              ```
+           
     4. Breve descripción del código 
     5. Bitácora del proyecto
-    6. Guía de instalación 
-    7. Instalación
-    8. Comandos de ejecución
-    9. Vídeo en youtube
+    6. Guía de instalación
+       1. Instalar python
+       2. Instalar pip 
+       3. Instalar tabulate
+       4. Instalar regex
+    7. Comandos de ejecución
+      1. Abrir una terminal en la ubicacion de **main.py** y ejecutar el comando:
+        ```py
+        python main.py
+        ```
+      2. Seleccionar una de las opciones desplegadas por el menu de opciones
+      
+    8.  Vídeo en youtube
 
 _____
 
 ### Faltantes 
-Leer --> Al hacer la primera lectura del archivo deberá determinar cuántos registros
-hay, cuántos han sido eliminados (si hay eliminados), y con cuánto
+Leer --> Al hacer la primera lectura del archivo deberá determinar cuántos registros hay, cuántos han sido eliminados (si hay eliminados), y con cuánto
 espacio se cuenta para ingresar nuevos registros (ver lista de disponibles).
+
+Escribir 
+--> Antes de grabar un registro deberá determinar (basándose en la lista de
+disponibles) si es posible guardar el registro en un espacio dejado por algún
+registro. Si no encuentra ningún espacio deberá grabar el registro al final
+del archivo, si lo encuentra deberá grabarlo y registrar los datos utilizando
+el formato correcto de cada registro.
+--> Una vez que el registro se almacene debe actualizarse la lista de
+disponibles y el archivo de índices.

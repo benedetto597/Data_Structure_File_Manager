@@ -27,7 +27,6 @@ class LinkedList:
             queue = self.first
             self.first = Node(position, record)
             self.first.next = queue
-
             return True
         else:
             if position > 0:
@@ -66,7 +65,7 @@ class LinkedList:
             else:
                 return False
             
-    def deleteInPosition(self, record, position):
+    def deleteInPosition(self, position):
         count = 0
         if position == 0:
             queue = self.first
