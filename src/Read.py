@@ -10,6 +10,7 @@ class Read:
         
     # Leer archivo separado por saltos de linea
     def readFile(self):
+        """ Leer archivo enviado en el constructor """
         if self.ext == 'txt':
             file = open(self.file, 'r')
             # Agregar indice a cada dato leido

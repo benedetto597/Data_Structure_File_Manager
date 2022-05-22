@@ -1,4 +1,5 @@
 #-*- coding:utf8 -*-
+from multiprocessing import cpu_count
 import re
 from src.Read import Read
 from src.Write import Write
@@ -28,6 +29,7 @@ while (end == False):
         index = input("\n***** Insert index of a record: *****\n")
         content.printDetail(index)
     elif option == '100':
+        oldContent = content
         value = input("\n***** Insert value to add a record: *****\n")
         content.addRecord(content.records.getLast().index + 1, value)
         write = Write("data/Proyecto1.txt", content.stringLLate(content.records))
@@ -36,7 +38,11 @@ while (end == False):
         read = Read("data/Proyecto1.txt", content)
         read.readFile()
         content.printAll()
+        content.updateAvaibles(oldContent)
+        write = Write("data/Availables.txt", content.stringLLate(content.availables))
+        write.writeFile()
     elif option == '101':
+        oldContent = content
         index = input("\n***** Insert index to add a record: *****\n")
         value = input("\n***** Insert value to add a record: *****\n")
         content.addRecordInPosition(int(index), value)
@@ -46,7 +52,11 @@ while (end == False):
         read = Read("data/Proyecto1.txt", content)
         read.readFile()
         content.printAll()
+        content.updateAvaibles(oldContent)
+        write = Write("data/Availables.txt", content.stringLLate(content.availables))
+        write.writeFile()
     elif option == '102':
+        oldContent = content
         index = input("\n***** Insert index to delete a record: *****\n")
         content.deleteRecord(int(index))
         write = Write("data/Proyecto1.txt", content.stringLLate(content.records))
@@ -55,4 +65,10 @@ while (end == False):
         read = Read("data/Proyecto1.txt", content)
         read.readFile()
         content.printAll()
-        
+        content.updateAvaibles(oldContent)
+        write = Write("data/Availables.txt", content.stringLLate(content.availables))
+        write.writeFile()
+    elif option == '200':
+        content.printAvaibles()
+    elif option == '201':
+        content.printAvaibles()

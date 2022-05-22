@@ -89,34 +89,14 @@ _____
               ```py
               pip install regex
               ```
-           
-    4. Breve descripción del código 
-    5. Bitácora del proyecto
-    6. Guía de instalación
+    4. Guía de instalación
        1. Instalar python
        2. Instalar pip 
        3. Instalar tabulate
        4. Instalar regex
-    7. Comandos de ejecución
+    5. Comandos de ejecución
       1. Abrir una terminal en la ubicacion de **main.py** y ejecutar el comando:
         ```py
         python main.py
         ```
       2. Seleccionar una de las opciones desplegadas por el menu de opciones
-      
-    8.  Vídeo en youtube
-
-_____
-
-### Faltantes 
-Leer --> Al hacer la primera lectura del archivo deberá determinar cuántos registros hay, cuántos han sido eliminados (si hay eliminados), y con cuánto
-espacio se cuenta para ingresar nuevos registros (ver lista de disponibles).
-
-Escribir 
---> Antes de grabar un registro deberá determinar (basándose en la lista de
-disponibles) si es posible guardar el registro en un espacio dejado por algún
-registro. Si no encuentra ningún espacio deberá grabar el registro al final
-del archivo, si lo encuentra deberá grabarlo y registrar los datos utilizando
-el formato correcto de cada registro.
---> Una vez que el registro se almacene debe actualizarse la lista de
-disponibles y el archivo de índices.

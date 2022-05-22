@@ -10,6 +10,7 @@ class LinkedList:
         self.first = None
 
     def add(self, index, record):
+        """ Añadir un registro al final de la lista """
         if not self.first:
             self.first = Node(index, record)
             return True
@@ -22,6 +23,7 @@ class LinkedList:
         return False
 
     def addInPosition(self, record, position):
+        """ Añadir un registro en una posicion de la lista """
         count = 0
         if position == 0:
             queue = self.first
@@ -43,6 +45,7 @@ class LinkedList:
         return False
     
     def delete(self, record):
+        """ Eliminar el registro de la lista por su record """
         prev = None
         current = self.first
         if self.first is None:
@@ -66,6 +69,7 @@ class LinkedList:
                 return False
             
     def deleteInPosition(self, position):
+        """ Eliminar un registro en una posicion de la lista """
         count = 0
         if position == 0:
             queue = self.first
@@ -85,15 +89,18 @@ class LinkedList:
         return False
 
     def getFirst(self):
+        """ Obtener el primer registro """
         return self.first
 
     def getLast(self):
+        """ Obtener el ultimo registro """
         last = self.first
         while last.next:
             last = last.next
         return last
 
     def getInPosition(self, position):
+        """ Obtener un registro en una posicion especifica """
         count = 0
         if position == 0:
             return self.first
@@ -108,10 +115,3 @@ class LinkedList:
                         return current
                     before = before.next
         return False
-
-    def printLL(self):
-        current = self.first
-        while current.next:
-            print(current.record)
-            current = current.next
-        print(current.record)

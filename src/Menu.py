@@ -7,13 +7,15 @@ class Menu:
         pass
     
     def validateOption(self, opt):
-        """ Valdiate option inserted by user with regex """
+        """ Validar opcion ingresada por el usuario con expresiones regulares """
         try:
             if r.match("^[0-9]*$", opt):
-                if (int(opt) > 0 and int(opt) <= 2) or (int(opt) > 99 and int(opt) <= 102):
+                if (int(opt) > 0 and int(opt) <= 2) or (int(opt) > 99 and int(opt) <= 102) or (int(opt) > 199 and int(opt) <= 201):
                     return opt
                 else:
-                    return False
+                    print("\n***** Invalid option: '%s' *****\n" % opt)
+                    print("***** Select a valid option *****")
+                    return True
             else:
                 print("\n***** Invalid option: '%s' *****\n" % opt)
                 print("***** Select a valid option *****")
@@ -23,7 +25,7 @@ class Menu:
             return False
     
     def printIntro(self):
-        """ Print Intro """
+        """ Imprimir introduccion """
         intro = [
             ["Project 1 - Data Structures"],
             ["File manipulation"],
@@ -33,7 +35,7 @@ class Menu:
         print(tabulate(intro, headers="firstrow", tablefmt='psql'))
         
     def printOpts(self):
-        """ Print options to user """
+        """ Imprimir opciones del usuario """
         print("\n")
         opts = [
             ["Index", "Option"],

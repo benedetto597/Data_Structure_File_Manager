@@ -10,6 +10,7 @@ class Write:
         
     # Leer archivo separado por saltos de linea
     def writeFile(self):
+        """ Escribir archivo enviado en el constructor """
         if self.ext == 'txt':
             file = open(self.file, 'w+')
             file.write(self.content)
