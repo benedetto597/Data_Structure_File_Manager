@@ -2,7 +2,6 @@
 import re as r
 from src.LinkedList import LinkedList
 from tabulate import tabulate
-
 class Availables:
     def __init__(self, currIndex, value, lastIndex):
         self.currIndex = currIndex
